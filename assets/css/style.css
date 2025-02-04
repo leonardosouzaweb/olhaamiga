@@ -62,7 +62,7 @@ section.c2 .block div:nth-child(2) nav ul a { color: #000; line-height: 40px; tr
 section.c2 .block div:nth-child(2) nav ul a:hover { color: rgba(0,0,0,0.5); }
 
 /* MOBILE */
-@media (max-width: 899px) {
+@media only screen and (max-width:899px) {
     .navbar { background: #ED4C67; box-shadow: 0px 18px 56px -18px rgba(0, 0, 0, 0.3), 0px 30px 45px -30px rgba(50, 50, 93, 0.25); }
     .navbar .container { display: flex; align-items: center; justify-content: space-between; padding: 5px 20px; flex-wrap: nowrap !important; }
     .navbar .container div { width: auto; }
@@ -145,7 +145,7 @@ section.c2 .block div:nth-child(2) nav ul a:hover { color: rgba(0,0,0,0.5); }
 .modal-body .share div:nth-child(2) img { width: 30px; margin-right: 5px; transition: all 0.3s; }
 .modal-body .share div:nth-child(2) img:hover { opacity: 0.7; cursor: pointer; }
 
-@media (max-width: 899px) {
+@media only screen and (max-width:899px) {
     .modal-dialog .modal-content { width: 90%; margin: 0 auto; }
     .modal-body p { font-size: 14px; }
     .modal-body .code { width: 100%; }
@@ -190,7 +190,7 @@ footer .end .block div:nth-child(2) { width: auto; margin-left: auto; }
 footer .legal { border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 30px; }
 footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height: 25px; }
 
-@media (max-width: 899px) {
+@media only screen and (max-width:899px) {
     footer { padding: 10% 0; margin-top: 30px; }
     footer .container { padding: 0px 25px; }
     footer .container .block { flex-wrap: wrap; gap: 15px; }
@@ -326,3 +326,25 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 .default .ofertasIntern a { color: #000; font-size: 12px; margin-top: 10px;  }
 .default .ofertasIntern .btn { width: 100%; background: #ED4C67; padding: 10px; color: #fff; border: none; border-radius: 20px; font-weight: bold; font-size: 17px; transition: all 0.3s; }
 .default .ofertasIntern .btn:hover { background: #bf3c52; }
+
+@media only screen and (max-width:899px) {
+    .default { padding-top:20px; }
+    .default .container { padding: 0px 20px; }
+    .default .title { border-bottom: 1px solid #f1f1f1; padding-bottom: 20px; margin-bottom: 15px; }
+    .default .title div:nth-child(1) { width: 20%; }
+    .default .title div:nth-child(2) { width: 80%; }
+    .default .title img { width: 100%; }
+    .default .title p { font-size: 13px; }
+
+    .default .cuponsIntern p { font-size: 13px; color: rgba(0, 0, 0, 0.6); margin-top: -10px; }
+    .default .ofertasIntern p { font-size: 13px; color: rgba(0, 0, 0, 0.6); margin-top: -10px; }
+
+    .default .cuponsIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; }
+    .default .cuponsIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; }
+    .default .cuponsIntern div h3 { font-size: 15px; margin-bottom: 20px; display: block; }
+
+    .default .ofertasIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; }
+    .default .ofertasIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; }
+    .default .ofertasIntern div h3 { font-size: 15px; margin-bottom: 20px; display: block; }
+
+}

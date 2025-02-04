@@ -12,7 +12,7 @@ toggleIcon.addEventListener('click', () => {
 });
 
 var baseUrl = window.location.origin.includes("localhost")
-    ? window.location.origin + "/olha"
+    ? window.location.origin + "/olhaamiga"
     : window.location.origin;
 
 function abrirModal(button) {

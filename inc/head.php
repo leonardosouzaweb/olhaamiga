@@ -5,7 +5,7 @@
     $protocol = (!$is_local && (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')) ? "https" : "http";
     
     // Define a base URL
-    $base_url = $is_local ? "/olha" : $protocol . "://" . $host;
+    $base_url = $is_local ? "/olhaamiga" : $protocol . "://" . $host;
     
     // Define a URL da página atual
     $page_url = isset($page_url) ? $page_url : $protocol . "://" . $host . $_SERVER['REQUEST_URI'];

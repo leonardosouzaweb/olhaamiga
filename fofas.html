@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolinha Pulante</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .ball {
+            width: 50px;
+            height: 50px;
+            background-color: pink;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="ball" id="ball"></div>
+    <script>
+        const ball = document.getElementById('ball');
+        let x = 100, y = 100;
+        let dx = 3, dy = 3;
+        const speed = 4;
+
+        function moveBall() {
+            x += dx * speed;
+            y += dy * speed;
+
+            if (x + 50 > window.innerWidth || x < 0) {
+                dx *= -1;
+            }
+            if (y + 50 > window.innerHeight || y < 0) {
+                dy *= -1;
+            }
+
+            ball.style.left = x + 'px';
+            ball.style.top = y + 'px';
+
+            requestAnimationFrame(moveBall);
+        }
+        
+        ball.addEventListener('click', () => {
+            alert('Vocês são fofas');
+        });
+        
+        moveBall();
+    </script>
+</body>
+</html>

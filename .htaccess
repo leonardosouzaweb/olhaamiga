@@ -1,0 +1,36 @@
+RewriteEngine On
+RewriteBase /olhaamiga/
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^desconto/([a-zA-Z0-9-_]+)/?$ desconto/index.php?loja=$1 [L,QSA]
+
+RewriteRule ^cupom/([a-zA-Z0-9-_]+)/?$ cupom/index.php?categoria=$1 [L,QSA]
+
+RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1) [NC]
+php_flag display_errors on
+php_value error_reporting 32767
+
+Options -Indexes
+
+<FilesMatch "(^\.htaccess|\.htpasswd|\.env|config\.php|database\.php|db\.php|composer\.json|composer\.lock)">
+    Require all granted
+</FilesMatch>
+
+<FilesMatch "\.(jpg|jpeg|png|gif|webp|svg|pdf)$">
+    Require all granted
+</FilesMatch>
+
+RewriteRule ^uploads/.*\.(php|php3|php4|php5|phtml)$ - [F,L]
+
+RewriteCond %{HTTP_REFERER} !^$
+RewriteCond %{HTTP_REFERER} !^https://(www\.)?olhaamiga\.com\.br [NC]
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1) [NC]
+RewriteRule \.(jpg|jpeg|png|gif|webp|svg|pdf)$ - [F,L]
+
+RewriteCond %{REQUEST_URI} ^/backoffice [NC]
+RewriteCond %{REMOTE_ADDR} !^127\.0\.0\.1$
+RewriteCond %{REMOTE_ADDR} !^193\.186\.4\.203$
+RewriteRule .* - [F,L]
+
