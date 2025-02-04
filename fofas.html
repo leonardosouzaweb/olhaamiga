@@ -10,44 +10,54 @@
             overflow: hidden;
             background-color: #000;
         }
+        .ball-container {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
         .ball {
             width: 50px;
             height: 50px;
             background-color: pink;
             border-radius: 50%;
-            position: absolute;
-            top: 50px;
-            left: 50px;
         }
     </style>
 </head>
 <body>
-    <div class="ball" id="ball"></div>
+    <div class="ball-container" id="ball-container">
+        <div class="ball"></div>
+    </div>
     <script>
-        const ball = document.getElementById('ball');
+        const ballContainer = document.getElementById('ball-container');
         let x = 100, y = 100;
         let dx = 3, dy = 3;
-        const speed = 4;
+        const speed = 5;
 
         function moveBall() {
             x += dx * speed;
             y += dy * speed;
 
-            if (x + 50 > window.innerWidth || x < 0) {
+            if (x + 80 > window.innerWidth || x < 0) {
                 dx *= -1;
             }
-            if (y + 50 > window.innerHeight || y < 0) {
+            if (y + 80 > window.innerHeight || y < 0) {
                 dy *= -1;
             }
 
-            ball.style.left = x + 'px';
-            ball.style.top = y + 'px';
+            ballContainer.style.left = x + 'px';
+            ballContainer.style.top = y + 'px';
 
             requestAnimationFrame(moveBall);
         }
         
-        ball.addEventListener('click', () => {
-            alert('Vocês são fofas');
+        document.addEventListener('DOMContentLoaded', () => {
+            ballContainer.addEventListener('click', () => {
+                alert('Vocês são fofas e lindas e maravilhosas <3');
+            });
         });
         
         moveBall();
