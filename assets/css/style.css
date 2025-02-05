@@ -378,10 +378,12 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 
     .default .cuponsIntern p { font-size: 13px; color: rgba(0, 0, 0, 0.6); }
     .default .ofertasIntern p { font-size: 13px; color: rgba(0, 0, 0, 0.6); }
-
+    
     .default .cuponsIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; }
     .default .cuponsIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; }
     .default .cuponsIntern div h3 { font-size: 15px; margin-bottom: 20px; display: block; }
+
+    .default .cuponsIntern .code { justify-content: center; }
 
     .default .ofertasIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; }
     .default .ofertasIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; }
