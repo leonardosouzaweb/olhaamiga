@@ -1,6 +1,10 @@
 RewriteEngine On
 RewriteBase /
 
+RewriteCond %{HTTPS} off
+RewriteCond %{HTTP_HOST} ^(www\.)?olhaamiga\.com\.br$ [NC]
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
