@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /olhaamiga/
+RewriteBase /olhaamiga2/
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
