@@ -40,14 +40,33 @@ function abrirModal(button) {
     }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    const hiddenCodeDivs = document.querySelectorAll(".hiddenCode");
+
+    hiddenCodeDivs.forEach(function (div) {
+        div.addEventListener("click", function () {
+            div.remove();
+        });
+    });
+
+    document.querySelectorAll('a[target="_blank"]').forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault(); 
+
+            const urlCupom = this.href; 
+            const urlOrigem = window.location.href; 
+
+            window.open(urlCupom, "_blank");
+            window.location.href = urlOrigem;
+        });
+    });
+});
+
 if (localStorage.getItem('cookieConsent') === 'accepted') {
     document.getElementById('cookieConsent').style.display = 'none';
 }
 
-// Adiciona o evento de clique no botÃ£o
 document.getElementById('acceptCookies').addEventListener('click', function () {
-    // Salva o consentimento no localStorage
     localStorage.setItem('cookieConsent', 'accepted');
-    // Oculta o banner de cookies
     document.getElementById('cookieConsent').style.display = 'none';
 });

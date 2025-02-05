@@ -56,10 +56,10 @@ if ($slugLoja) {
                             <h3><?= htmlspecialchars($cupom['titulo']) ?></h3>
                             <p><?= htmlspecialchars($cupom['descricao']) ?></p>
                             <div class="code">
-                                <div class="hiddenCode">Ver código</div>
+                                <div class="hiddenCode" id="hiddenCode">VER CUPOM</div>
                                 <span><?= htmlspecialchars($cupom['codigoCupom']) ?> 
                                     <a href="<?= htmlspecialchars($cupom['urlCupom']) ?>" target="_blank">
-                                        <img src="<?= $base_url; ?>/assets/images/icon/icCopy.svg">
+                                        <img src="<?= $base_url; ?>/assets/images/icon/icCopy.svg" alt="Icone">
                                     </a>
                                 </span>
                             </div>

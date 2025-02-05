@@ -33,20 +33,20 @@
         <div>
             <span>Redes Sociais</span>
             <div class="shareFooter">
-                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icWhatsapp.svg"></a>
-                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icFacebook.svg"></a>
-                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icInstagram.svg"></a>
-                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icTwitter.svg"></a>
+                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icWhatsapp.svg" alt="Rede Social"></a>
+                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icFacebook.svg" alt="Rede Social"></a>
+                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icInstagram.svg" alt="Rede Social"></a>
+                <a href=""><img src="<?php echo $base_url; ?>/assets/images/icon/icTwitter.svg" alt="Rede Social"></a>
             </div>
 
             <div class="buttonsShare">
                 <button>
-                    <img src="<?php echo $base_url; ?>/assets/images/icon/icApple.svg">
+                    <img src="<?php echo $base_url; ?>/assets/images/icon/icApple.svg" alt="Icone">
                     <h6><small>Em breve</small> App Store</h6>
                 </button>
 
                 <button>
-                    <img src="<?php echo $base_url; ?>/assets/images/icon/icGoogle.svg">
+                    <img src="<?php echo $base_url; ?>/assets/images/icon/icGoogle.svg" alt="Icone">
                     <h6><small>Em breve</small> Google Play</h6>
                 </button>
             </div>
@@ -55,7 +55,7 @@
     <div class="end">
         <div class="block">
             <div>
-                <img src="<?php echo $base_url; ?>/assets/images/logo.svg" alt="logo">
+                <img src="<?php echo $base_url; ?>/assets/images/logo.svg" alt="Logotipo">
             </div>
 
             <div>
@@ -71,7 +71,7 @@
 <div class="cookie-bar" id="cookieConsent">
     <div class="content">
         <div>
-            <p><img src="<?php echo $base_url; ?>/assets/images/icon/icCookie.svg" alt="logo"> A gente usa cookies para personalizar ofertas e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <b>Política de Privacidade.</b></p>
+            <p><img src="<?php echo $base_url; ?>/assets/images/icon/icCookie.svg" alt="Cookie"> A gente usa cookies para personalizar ofertas e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <b>Política de Privacidade.</b></p>
         </div>
         <div>
             <button class="btn btn-primary" id="acceptCookies">Ok, entendi</button>

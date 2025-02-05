@@ -73,7 +73,7 @@ if (!$slugCategoria) {
                             </div>
                             <div>
                                 <?php foreach ($listaCategorias as $categoria): 
-                                    $urlCategoria = "/olha/cupom/" . htmlspecialchars($categoria['slug']);
+                                    $urlCategoria = "$base_url/cupom/" . htmlspecialchars($categoria['slug']);
                                 ?>
                                 <a href="<?= $urlCategoria ?>">
                                     <?= htmlspecialchars($categoria['nome']) ?>
@@ -88,7 +88,7 @@ if (!$slugCategoria) {
                     <div>
                         <?php if (!empty($categoria['imagem'])): ?>
                             <div class="categoria-imagem">
-                                <img src="/olha/<?= htmlspecialchars($categoria['imagem']) ?>" alt="<?= htmlspecialchars($categoria['nome']) ?>">
+                                <img src="<?= $base_url; ?>/<?= htmlspecialchars($categoria['imagem']) ?>" alt="<?= htmlspecialchars($categoria['nome']) ?>">
                             </div>
                         <?php endif; ?>
                     </div>
@@ -109,10 +109,10 @@ if (!$slugCategoria) {
                                 <h3><?= htmlspecialchars($cupom['titulo']) ?></h3>
                                 <p><?= htmlspecialchars($cupom['descricao']) ?></p>
                                 <div class="code">
-                                    <div class="hiddenCode">Ver código</div>
+                                    <div class="hiddenCode" id="hiddenCode">Ver código</div>
                                     <span><?= htmlspecialchars($cupom['codigoCupom']) ?> 
                                         <a href="<?= htmlspecialchars($cupom['urlCupom']) ?>" target="_blank">
-                                            <img src="<?= $base_url; ?>/assets/images/icon/icCopy.svg">
+                                            <img src="<?= $base_url; ?>/assets/images/icon/icCopy.svg" alt="Icone">
                                         </a>
                                     </span>
                                 </div>
@@ -128,7 +128,7 @@ if (!$slugCategoria) {
                     <?php if (!empty($ofertas)): ?>
                         <?php foreach ($ofertas as $oferta): ?>
                             <div class="shadowCustom">
-                                <img src="<?= $base_url; ?>/<?= htmlspecialchars($oferta['fotoOferta']) ?>" width="100">
+                                <img src="<?= $base_url; ?>/<?= htmlspecialchars($oferta['fotoOferta']) ?>" width="100" alt="Foto da Oferta">
                                 <h3><?= htmlspecialchars($oferta['titulo']) ?></h3>
                                 <p><?= htmlspecialchars($oferta['descricao']) ?></p>
                                 <a href="<?= htmlspecialchars($oferta['urlOferta']) ?>" target="_blank" class="btn">Ver Oferta</a>
@@ -149,5 +149,6 @@ if (!$slugCategoria) {
     </footer>
 
     <?php include_once '../inc/bottom.php'; ?>
+
 </body>
 </html>

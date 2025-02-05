@@ -26,19 +26,18 @@ a { text-decoration: none !important; }
 .navbar .container .menu ul li:hover { cursor: pointer; color: rgba(255,255,255,0.9); background-color: #c73d54; border-radius: 14px; }
 
 section.c1 { padding: 5% 0; }
-section.c1 h1 { font-size: 55px; font-weight: bold; letter-spacing: -1px;}
+section.c1 h1 { font-size: 55px; font-weight: bold; letter-spacing: -1px; }
 section.c1 p { font-size: 25px; color: rgba(0, 0, 0, 0.7); }
 
 section.c1 .cards { display: flex; align-items: center; margin-top: 60px; justify-content: space-between; }
 section.c1 .cards a { width: 11%; }
-section.c1 .cards a img { border-radius: 25px; display: block; margin: 0 auto; width: 100%; transition: all 0.3s; border: 1px solid #e1e1e1; }
+section.c1 .cards a img { border-radius: 25px; display: block; margin: 0 auto; width: 100%; transition: all 0.3s; border: 1px solid #e1e1e1;}
 section.c1 .cards a img:hover { opacity: 0.6; }
-section.c1 .cards a span { font-weight: bold; font-size: 17px; margin-top: 20px; display: block; color: #000; }
+section.c1 .cards a span { font-weight: bold; font-size: 19px; margin-top: 20px; display: block; color: #000; }
 section.c1 .cards a p { font-size: 14px; font-weight: bold; opacity: 0.7; }
 
 
-section.c2 { padding-bottom: 5%; position: relative; overflow: hidden; }
-section.c2 .pattern img { width: 900px; position: absolute; right:0; bottom: -250px; z-index: -1; opacity: 0.2; }
+section.c2 { padding-bottom: 2%; position: relative; }
 section.c2 .block { display: flex; justify-content: space-between; margin-top: 30px; gap: 30px; }
 section.c2 .block div:nth-child(1) { width: 75%; }
 section.c2 .block div:nth-child(1) .coupon { background: #fff; border: 1px solid #f1f1f1; padding: 30px; display: flex; align-items: center;  width: 100%; border-radius: 25px; gap: 20px; margin-bottom: 30px;  }
@@ -58,10 +57,12 @@ section.c2 .block div:nth-child(1) .coupon .share button:after { top: 5px; right
 section.c2 .block div:nth-child(1) .coupon .share .mask { width: 54%; background: #ed4c672e; padding: 7px 30px 7px 0px; color: #ed4c67; border: 2px dashed; border-radius: 20px; font-weight: bold; font-size: 19px; text-align: right; position: absolute; top: 0; right: 0; }
 
 section.c2 .block div:nth-child(2) { width: 20%; }
-section.c2 .block div:nth-child(2) span { font-size: 17px; margin-bottom: 20px; display: flex; align-items: center; line-height: 23px; gap: 20px; transition: all 0.3s; }
-section.c2 .block div:nth-child(2) span:hover { cursor:pointer; opacity: 0.8; }
+section.c2 .block div:nth-child(2) span { font-size: 15px; font-weight: 500; color: rgba(0, 0, 0, 0.7); margin-bottom: 20px; display: flex; align-items: center; line-height: 20px; gap: 20px; transition: all 0.3s; border: 1px solid #e6e6e6; padding: 10px 15px; border-radius: 20px; }
+section.c2 .block div:nth-child(2) span:hover { cursor:pointer; background: #ED4C67; color: #fff; border: 1px solid transparent; }
 section.c2 .block div:nth-child(2) span img { width: 50px; }
-section.c2 .block div:nth-child(2) nav { border-top: 1px solid #d2d2d2; padding-top: 20px; }
+section.c2 .block div:nth-child(2) span:hover img { filter: brightness(0) invert(1); }
+
+section.c2 .block div:nth-child(2) nav { border-top: 1px solid #e1e1e1; padding-top: 25px; margin-top: 35px; }
 section.c2 .block div:nth-child(2) nav h4 { font-weight: bold; font-size: 16px; }
 section.c2 .block div:nth-child(2) nav ul a { color: #000; line-height: 40px; transition: all 0.3s; }
 section.c2 .block div:nth-child(2) nav ul a:hover { color: rgba(0,0,0,0.5); }
@@ -141,10 +142,10 @@ section.c2 .block div:nth-child(2) nav ul a:hover { color: rgba(0,0,0,0.5); }
 .modal-body .logo { margin: 0 auto; display: block; }
 .modal-body .logo img { margin: 0 auto; display: block; width: 100px; margin-bottom: 25px; border: 1px solid #e8e8e8; }
 
-.modal-body .code { border: 2px dashed #c7c7c7; border-radius: 20px; padding: 15px; width: 70%; margin: 0 auto; margin-top: 20px; }
-.modal-body .code span { margin: 0; font-size: 30px; align-items: center; justify-content: space-between; }
-.modal-body .code span img { width: 25px; border-radius: 0 !important; margin: 0; margin-top: -5px; transition: all 0.3s; }
-.modal-body .code span img:hover { opacity: 0.7; }
+.modal-body .code { border: 2px dashed #c7c7c7; border-radius: 20px; padding: 15px; width: 70%; margin: 0 auto; margin-top: 20px; display: flex; align-items: center; text-align: center; justify-content: center; gap: 10px; }
+.modal-body .code span { margin: 0; font-size: 30px; }
+.modal-body .code img { width: 25px; border-radius: 0 !important; margin: 0; margin-top: 0px; transition: all 0.3s; }
+.modal-body .code img:hover { opacity: 0.7; }
 
 .modal-body .share { margin-top: 30px; border-top: 1px solid #f1f1f1; padding-top: 20px; display: flex; align-items: center; justify-content: space-between; }
 .modal-body .share div:nth-child(1) { width: 60%; }
@@ -162,6 +163,14 @@ section.c2 .block div:nth-child(2) nav ul a:hover { color: rgba(0,0,0,0.5); }
     .modal-body .share div:nth-child(2) img { margin-right: 20px; }
     .modal-body .share div:nth-child(2) img:last-child { margin-right: 0; }
 }
+
+
+.work { padding-bottom: 5%; }
+.work p { margin-top: 30px; font-size: 14px; border-top: 1px solid rgba(0, 0, 0, 0.1); padding-top: 25px; }
+.work .container .block { display:flex; gap: 30px;}
+.work .container .block div { width: 33%; }
+.work .container .block div span { color:#e34768; font-weight:bold; font-size: 18px; margin-bottom: 15px; display: block; }
+.work .container .block div p { color: rgba(0, 0, 0, 0.7); font-size: 14px; line-height: 24px; border: none; padding: 0; margin: 0;}
 
 /* FOOTER */
 footer { padding: 5% 0; background:#000; position: relative; }
@@ -225,6 +234,7 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 }
 
 
+
 /* COOKIE BAR */
 .cookie-bar { display: block; position: fixed; padding:20px; z-index: 3; bottom: 30px; width: 1200px; margin: 0 auto; left:0; right: 0px; border: 0px solid #e3e3e3; background-color: #fff; border-radius: 15px; box-shadow: 0px 18px 56px -18px rgba(0, 0, 0, 0.456), 0px 30px 45px -30px rgba(50, 50, 93, 0.25); }
 .cookie-bar .content { position: relative; display: flex; align-items: center; }
@@ -234,10 +244,12 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 .cookie-bar .content .btn-primary:hover { background:#ac344e; border: 1px solid transparent; }
 
 @media only screen and (max-width:899px) {
-    .cookie-bar { width: 100%; bottom: 0px; border-radius: 20px 20px 0px 0px; text-align: center; }
-    .cookie-bar .content p { font-size: 12px; line-height: 18px ;}
-    .cookie-bar .content p br { display: none;}
-    .cookie-bar .content .btn-primary { position: relative; width: 100%; margin-bottom: 20px; }
+    .cookie-bar { width: 90%; }
+    .cookie-bar .content { flex-direction: column; }
+    .cookie-bar .content div { width: 100%; }
+    .cookie-bar .content p { display:block; padding: 0; margin-bottom: 10px; } 
+    .cookie-bar .content p img { display:none; }
+    .cookie-bar .content .btn-primary { width:100% !important; display: block; background: #000; }
 }
 
 /* DASH */
@@ -313,19 +325,19 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 .default .title img { border: 1px solid #e8e8e8; border-radius: 20px; }
 .default .title p { margin: 0; }
 
-.default .cuponsIntern { display: flex; margin-top: 20px; }
+.default .cuponsIntern { display: flex; margin-top: 20px; justify-content: space-between; }
 .default .cuponsIntern div { background: #fff; border: 1px solid #f1f1f1; padding: 30px; width: 24%; border-radius: 25px; }
 .default .cuponsIntern div h3 { color: #e34768; font-size: 18px; font-weight: bold; }
 .default .cuponsIntern div p { color: rgba(0, 0, 0, 0.6); }
 .default .cuponsIntern a { color: #000; font-size: 12px; margin-top: 10px;  }
 
-.default .cuponsIntern .code { border: 2px dashed #c7c7c7; border-radius: 20px; padding: 10px; width: 100%; margin: 0 auto; margin-top: 10px; text-align: center; position: relative; }
-.default .cuponsIntern .code .hiddenCode { background-color: rgba(255, 255, 255, 0.4); -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); position: absolute; width: 100%; left: 0; right: 0; top: 0px; border: 2px solid transparent; border-radius: 20px; z-index: 1; padding: 8px; font-weight: bold; }
+.default .cuponsIntern .code { border: 2px dashed #c7c7c7; border-radius: 20px; padding: 10px; width: 100%; margin: 0 auto; margin-top: 10px; text-align: center; position: relative; display: flex; }
+.default .cuponsIntern .code .hiddenCode { cursor: pointer; background-color: rgba(255, 255, 255, 0.4); -webkit-backdrop-filter: blur(25px); backdrop-filter: blur(25px); position: absolute; width: 100%; left: 0; right: 0; top: 0px; border: 2px solid transparent; border-radius: 20px; z-index: 1; padding: 8px; font-weight: bold; }
 .default .cuponsIntern .code span { margin: 0; font-size: 17px; align-items: center; justify-content: space-between; font-weight: bold; position: relative; }
 .default .cuponsIntern .code span img { width: 22px; border-radius: 0 !important; margin: 0; margin-top: -5px; transition: all 0.3s; }
 .default .cuponsIntern .code span img:hover { opacity: 0.7; }
 
-.default .ofertasIntern { display: flex; margin-top: 20px; }
+.default .ofertasIntern { display: flex; margin-top: 20px; justify-content: space-between; }
 .default .ofertasIntern div { background: #fff; border: 1px solid #f1f1f1; padding: 30px; width: 24%; border-radius: 25px; }
 .default .ofertasIntern div h3 { color: #e34768; font-size: 18px; font-weight: bold; }
 .default .ofertasIntern div img { margin: 0 auto; display: block; margin-bottom: 20px; width: 80%; }
