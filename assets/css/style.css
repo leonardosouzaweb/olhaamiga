@@ -315,7 +315,7 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
 .default .lojasList span { font-weight: bold; font-size: 17px; margin-top: 20px; display: block; color: #000; text-align: center; }
 
 @media only screen and (max-width:899px) {
-    .default { margin-bottom: 40px; }
+    .default { margin-bottom: 40px; padding-top: 70px !important; }
     .default h1 { font-size: 20px; margin-bottom: 15px; letter-spacing: -0.5px; }
     .default .lojasList { display: flex; flex-wrap: nowrap; overflow-x: auto; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; }
     .default .lojasList div { margin-bottom: 0px; text-align: center; width: 30%; flex: 0 0 auto; box-shadow: none; padding: 10px; }
