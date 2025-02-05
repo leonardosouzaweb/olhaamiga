@@ -381,12 +381,13 @@ footer .legal p { color: rgba(255, 255, 255, 0.8); font-size: 13px; line-height:
     
     .default .cuponsIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; margin-bottom: 10px !important; }
     .default .cuponsIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; }
-    .default .cuponsIntern div h3 { font-size: 15px; margin-bottom: 20px; display: block; }
+    .default .cuponsIntern div h3 { font-size: 15px; margin-bottom: 15px; display: block; }
 
     .default .cuponsIntern .code { justify-content: center; }
 
     .default .ofertasIntern { display: flex; flex-wrap: nowrap; overflow-x: auto; align-items: center; margin-top: 15px; scrollbar-width: none; -ms-overflow-style: none; gap: 20px; background: #efefef; padding: 7px; border-radius: 27px; }
     .default .ofertasIntern div { margin-bottom: 20px; text-align: center; width: 60%; flex: 0 0 auto; box-shadow: none; padding: 20px; margin-bottom: 0; }
-    .default .ofertasIntern div h3 { font-size: 15px; margin-bottom: 20px; display: block; }
+    .default .ofertasIntern div h3 { font-size: 15px; margin-bottom: 10px; display: block; }
+    .default .ofertasIntern div p { padding: 0; margin-bottom: 10px; }
 
 }
