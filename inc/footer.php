@@ -67,3 +67,14 @@
         <p>As ofertas de cupons de desconto e produtos disponíveis neste site são fornecidas por empresas terceiras. O OlhaAmiga.com.br não se responsabiliza pela precisão, validade ou condições dessas ofertas. Em caso de dúvidas, problemas ou questões relacionadas ao uso de cupons ou compras de produtos, recomendamos que os usuários entrem em contato diretamente com a empresa anunciante.</p>
     </div>
 </div>
+
+<div class="cookie-bar" id="cookieConsent">
+    <div class="content">
+        <div>
+            <p><img src="<?php echo $base_url; ?>/assets/images/icon/icCookie.svg" alt="logo"> A gente usa cookies para personalizar ofertas e melhorar a sua experiência no site. Ao continuar navegando, você concorda com a nossa <b>Política de Privacidade.</b></p>
+        </div>
+        <div>
+            <button class="btn btn-primary" id="acceptCookies">Ok, entendi</button>
+        </div>
+    </div>
+</div>

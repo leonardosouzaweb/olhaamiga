@@ -39,3 +39,15 @@ function abrirModal(button) {
         modalLogo.src = baseUrl + "/assets/images/uploads/lojas/default.svg";
     }
 }
+
+if (localStorage.getItem('cookieConsent') === 'accepted') {
+    document.getElementById('cookieConsent').style.display = 'none';
+}
+
+// Adiciona o evento de clique no botÃ£o
+document.getElementById('acceptCookies').addEventListener('click', function () {
+    // Salva o consentimento no localStorage
+    localStorage.setItem('cookieConsent', 'accepted');
+    // Oculta o banner de cookies
+    document.getElementById('cookieConsent').style.display = 'none';
+});

@@ -1,7 +1,7 @@
 <?php
 // Detecta se está em localhost ou produção
 $base_url = (strpos($_SERVER['HTTP_HOST'], 'localhost') !== false)
-    ? "http://localhost/olha"
+    ? "http://localhost/olhaamiga"
     : "https://olhaamiga.com.br";
 
 $manifest = [

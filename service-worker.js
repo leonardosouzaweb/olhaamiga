@@ -1,16 +1,16 @@
 const CACHE_NAME = "olha-amiga-cache-v1";
 const urlsToCache = [
-    "/olha/",
-    "/olha/assets/css/style.css",
-    "/olha/assets/js/main.js",
-    "/olha/assets/images/logo.png",
-    "/olha/assets/icons/icon-192x192.png",
-    "/olha/assets/icons/icon-192x192-maskable.png",
-    "/olha/assets/icons/icon-512x512.png",
-    "/olha/assets/icons/icon-512x512-maskable.png",
-    "/olha/assets/icons/icon-144x144.png",
-    "/olha/assets/icons/screenshot1.png",
-    "/olha/assets/icons/screenshot1.png"
+    "/olhaamiga/",
+    "/olhaamiga/assets/css/style.css",
+    "/olhaamiga/assets/js/main.js",
+    "/olhaamiga/assets/images/logo.png",
+    "/olhaamiga/assets/icons/icon-192x192.png",
+    "/olhaamiga/assets/icons/icon-192x192-maskable.png",
+    "/olhaamiga/assets/icons/icon-512x512.png",
+    "/olhaamiga/assets/icons/icon-512x512-maskable.png",
+    "/olhaamiga/assets/icons/icon-144x144.png",
+    "/olhaamiga/assets/icons/screenshot1.png",
+    "/olhaamiga/assets/icons/screenshot1.png"
 ];
 
 // Instalação do Service Worker (cache inicial)

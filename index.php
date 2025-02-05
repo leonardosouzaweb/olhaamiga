@@ -2,24 +2,21 @@
 <?php require_once 'inc/db.php'; ?>
 
 <?php
-// Buscar todas as lojas cadastradas no banco
-$stmtLojas = $pdo->query("SELECT nome, slug, logoLoja FROM lojas ORDER BY nome ASC");
-$lojas = $stmtLojas->fetchAll(PDO::FETCH_ASSOC);
+    $stmtLojas = $pdo->query("SELECT nome, slug, logoLoja FROM lojas ORDER BY nome ASC");
+    $lojas = $stmtLojas->fetchAll(PDO::FETCH_ASSOC);
 
-// Buscar no banco um limite máximo de 20 lojas para destaque
-$stmtLojasDestaque = $pdo->query("SELECT nome, slug FROM lojas ORDER BY RAND() LIMIT 20");
-$lojasDestaque = $stmtLojasDestaque->fetchAll(PDO::FETCH_ASSOC);
+    $stmtLojasDestaque = $pdo->query("SELECT nome, slug FROM lojas ORDER BY RAND() LIMIT 20");
+    $lojasDestaque = $stmtLojasDestaque->fetchAll(PDO::FETCH_ASSOC);
 
-// Buscar os últimos 20 cupons cadastrados
-$stmtCupons = $pdo->query("
-    SELECT cupons.id, cupons.titulo, cupons.descricao, cupons.codigoCupom, cupons.urlCupom, cupons.logoLoja, 
-           lojas.nome AS loja, lojas.slug AS slugLoja
-    FROM cupons
-    INNER JOIN lojas ON cupons.urlLoja = lojas.slug
-    ORDER BY cupons.created DESC
-    LIMIT 20
-");
-$cupons = $stmtCupons->fetchAll(PDO::FETCH_ASSOC);
+    $stmtCupons = $pdo->query("
+        SELECT cupons.id, cupons.titulo, cupons.descricao, cupons.codigoCupom, cupons.urlCupom, cupons.logoLoja, 
+            lojas.nome AS loja, lojas.slug AS slugLoja
+        FROM cupons
+        INNER JOIN lojas ON cupons.urlLoja = lojas.slug
+        ORDER BY cupons.created DESC
+        LIMIT 20
+    ");
+    $cupons = $stmtCupons->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 <body>
@@ -75,8 +72,9 @@ $cupons = $stmtCupons->fetchAll(PDO::FETCH_ASSOC);
                                 data-url="<?php echo htmlspecialchars($cupom['urlCupom']); ?>"
                                 data-logo="<?php echo !empty($cupom['logoLoja']) ? htmlspecialchars($cupom['logoLoja']) : 'assets/images/uploads/lojas/default.svg'; ?>"
                                 onclick="abrirModal(this)">
-                                Ver desconto
+                                Ver Cupom
                             </button>
+                            <div class="mask">CUPOM20</div>
                         </div>
                     </div>
                 <?php endforeach; ?>
@@ -100,8 +98,11 @@ $cupons = $stmtCupons->fetchAll(PDO::FETCH_ASSOC);
                 </div>
             </div>
         </div>
+        <div class="pattern">
+            <img src="<?php echo $base_url; ?>/assets/images/pattern.svg">
+        </div>
     </section>
-
+    
     <footer>
         <?php include_once 'inc/footer.php'; ?>
     </footer>
