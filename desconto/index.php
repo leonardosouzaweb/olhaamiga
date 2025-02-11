@@ -42,17 +42,30 @@ if ($slugLoja) {
                     <img src="<?php echo $base_url; ?>/<?php echo !empty($loja['logoLoja']) ? htmlspecialchars($loja['logoLoja']) : 'assets/images/uploads/lojas/default.svg'; ?>" alt="<?php echo htmlspecialchars($loja['nome']); ?>">
                 </div>
 
-                <div>
+                <div class="description-container">
                     <h2><?= htmlspecialchars($loja['nome']) ?></h2>
-                    <p><?= htmlspecialchars($loja['descricao']) ?></p>
+                    <p class="description"><?= htmlspecialchars($loja['descricao']) ?></p>
+                    <span class="show-more" onclick="toggleDescription(this)">Mais informações</span>
+                </div>
+
+                <div>
+                    <span>Filtrar por:</span>
+                    <div class="btn-group" role="group">
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio1">
+                        <label class="btn btn-outline-primary" for="btnradio1">Cupons (0)</label>
+
+                        <input type="radio" class="btn-check" name="btnradio" id="btnradio2">
+                        <label class="btn btn-outline-primary" for="btnradio2">Ofertas (0)</label>
+                    </div>
                 </div>
             </div>
 
-            <h2>Cupons Disponíveis</h2>
+            <h2>😍 Cupons Disponíveis</h2>
             <div class="cuponsIntern mb-5">
                 <?php if (!empty($cupons)): ?>
                     <?php foreach ($cupons as $cupom): ?>
                         <div class="shadowCustom">
+                            <span class="badge"><?= rtrim(rtrim(number_format($cupom['porcentagemDesconto'], 2, '.', ''), '0'), '.') ?>% <small>OFF</small></span>
                             <h3><?= htmlspecialchars($cupom['titulo']) ?></h3>
                             <p><?= htmlspecialchars($cupom['descricao']) ?></p>
                             <div class="code">
@@ -70,11 +83,12 @@ if ($slugLoja) {
                 <?php endif; ?>
             </div>
 
-            <h2>Ofertas Disponíveis</h2>
+            <h2>🔥 Ofertas Disponíveis</h2>
             <div class="ofertasIntern">
                 <?php if (!empty($ofertas)): ?>
                     <?php foreach ($ofertas as $oferta): ?>
                         <div class="shadowCustom">
+                            <span class="badge"><?= rtrim(rtrim(number_format($oferta['porcentagemDesconto'], 2, '.', ''), '0'), '.') ?>% <small>OFF</small></span>
                             <img src="<?= $base_url; ?>/<?= htmlspecialchars($oferta['fotoOferta']) ?>" width="100">
                             <h3><?= htmlspecialchars($oferta['titulo']) ?></h3>
                             <p><?= htmlspecialchars($oferta['descricao']) ?></p>
@@ -108,6 +122,10 @@ if ($slugLoja) {
             </div>
         </div>
     <?php endif; ?>
+
+    <footer>
+        <?php include_once '../inc/footer.php'; ?>
+    </footer>
 
     <?php include_once '../inc/bottom.php'; ?>
 </body>

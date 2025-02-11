@@ -1,7 +1,7 @@
 <div class="navbar">
     <div class="container">
         <div class="logo">
-            <a href="<?php echo $base_url; ?>"><img src="<?php echo $base_url; ?>/assets/images/logo.svg" alt="Logotipo"></a>
+            <a href="<?php echo $base_url; ?>"><img src="<?php echo $base_url; ?>/assets/images/logo-alt.svg" alt="Logotipo"></a>
         </div>
         <div class="search">
             <input type="text" class="form-control" placeholder="Pesquisar por lojas...">

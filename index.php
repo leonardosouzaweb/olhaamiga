@@ -9,14 +9,15 @@
     $lojasDestaque = $stmtLojasDestaque->fetchAll(PDO::FETCH_ASSOC);
 
     $stmtCupons = $pdo->query("
-        SELECT cupons.id, cupons.titulo, cupons.descricao, cupons.codigoCupom, cupons.urlCupom, cupons.logoLoja, 
-            lojas.nome AS loja, lojas.slug AS slugLoja
+    SELECT cupons.id, cupons.titulo, cupons.descricao, cupons.codigoCupom, cupons.urlCupom, cupons.logoLoja, 
+        cupons.porcentagemDesconto, lojas.nome AS loja, lojas.slug AS slugLoja
         FROM cupons
         INNER JOIN lojas ON cupons.urlLoja = lojas.slug
         ORDER BY cupons.created DESC
         LIMIT 20
     ");
     $cupons = $stmtCupons->fetchAll(PDO::FETCH_ASSOC);
+
 ?>
 
 <body>
@@ -26,8 +27,8 @@
 
     <section class="c1">
         <div class="container text-center">
-            <h1>Cupons de Desconto, Produtos e Cashback</h1>
-            <p>Economize na sua compra usando os melhores Cupons de Desconto e Cashback!</p>
+            <h1>Cupons de Desconto, Produtos</h1>
+            <p>Economize na sua compra usando os melhores Cupons de Desconto!</p>
 
             <div class="cards">
                 <?php foreach ($lojas as $loja): ?>

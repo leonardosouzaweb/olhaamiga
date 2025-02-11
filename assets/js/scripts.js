@@ -60,7 +60,76 @@ document.addEventListener("DOMContentLoaded", function () {
             window.location.href = urlOrigem;
         });
     });
+
+    const btnCupons = document.getElementById("btnradio1");
+    const btnOfertas = document.getElementById("btnradio2");
+    const labelCupons = document.querySelector("label[for='btnradio1']");
+    const labelOfertas = document.querySelector("label[for='btnradio2']");
+    const cuponsSection = document.querySelector(".cuponsIntern");
+    const ofertasSection = document.querySelector(".ofertasIntern");
+
+    function atualizarContagens() {
+        const totalCupons = document.querySelectorAll(".cuponsIntern .shadowCustom").length;
+        const totalOfertas = document.querySelectorAll(".ofertasIntern .shadowCustom").length;
+
+        labelCupons.innerText = `Cupons (${totalCupons})`;
+        labelOfertas.innerText = `Ofertas (${totalOfertas})`;
+    }
+
+    function marcarEscrollar(botao, secao) {
+        btnCupons.checked = false;
+        btnOfertas.checked = false;
+
+        botao.checked = true;
+
+        if (secao) {
+            secao.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+    }
+
+    btnCupons.addEventListener("click", function () {
+        marcarEscrollar(btnCupons, cuponsSection);
+    });
+
+    btnOfertas.addEventListener("click", function () {
+        marcarEscrollar(btnOfertas, ofertasSection);
+    });
+
+    atualizarContagens();
+
+    document.querySelectorAll(".description-container").forEach(container => {
+        let description = container.querySelector(".description");
+        let showMore = container.querySelector(".show-more");
+
+        // Cria um clone para medir altura real
+        let clone = description.cloneNode(true);
+        clone.style.display = "block";
+        clone.style.position = "absolute";
+        clone.style.visibility = "hidden";
+        clone.style.width = description.clientWidth + "px";
+        clone.style.whiteSpace = "normal";
+        document.body.appendChild(clone);
+
+        if (clone.clientHeight > description.clientHeight) {
+            showMore.style.display = "inline";
+        }
+
+        document.body.removeChild(clone);
+    });
 });
+
+function toggleDescription(button) {
+    let container = button.closest(".description-container");
+    let description = container.querySelector(".description");
+
+    if (description.style.display === "-webkit-box") {
+        description.style.display = "block";
+        button.innerText = "Menos informações";
+    } else {
+        description.style.display = "-webkit-box";
+        button.innerText = "Mais informações";
+    }
+}
 
 if (localStorage.getItem('cookieConsent') === 'accepted') {
     document.getElementById('cookieConsent').style.display = 'none';
